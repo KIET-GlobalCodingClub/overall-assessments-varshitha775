@@ -1,1 +1,92 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/4FNp4VXK)
+🎓 Certificate Generator & Email Sender
+
+This project automates certificate generation and sends them to participants via email.
+It uses a certificate template image, fills in participant details from a CSV file, and emails each participant their personalized certificate.
+
+🚀 Features
+
+✅ Generate personalized certificates from a PNG template
+✅ Automatically place participant details (Name, Branch, Topic, Hackathon Name, Date)
+✅ Exports certificates as .png files
+✅ Emails certificates directly to participants
+✅ Works with CSV or Excel participant lists
+
+📂 Project Structure
+certificate_project/
+│-- code.py                  # Main script
+│-- emptytemplet.png         # Certificate template (edit this with your design)
+│-- certification_data.csv   # Participants list
+│-- generated_certificates/  # Auto-created folder for generated certificates
+│-- README.md                # Project documentation
+
+📑 CSV File Format
+
+Your certification_data.csv should have the following columns:
+
+Name	Branch	Hackathon_Name	Date	Topic	Email
+Alice Johnson	CSE	Hackathon 2025	2025-08-10	AI-powered Chatbot	alice@example.com
+
+Bob Williams	ECE	Hackathon 2025	2025-08-10	Smart IoT Automation	bob@example.com
+
+⚠️ Important: Column names must match exactly (Name, Branch, Hackathon_Name, Date, Topic, Email).
+
+⚙️ Setup
+1️⃣ Clone the repository
+git clone https://github.com/YOUR_USERNAME/certificate_project.git
+cd certificate_project
+
+2️⃣ Install dependencies
+
+Make sure you have Python 3.8+ installed. Then install required libraries:
+
+pip install pandas pillow openpyxl
+
+3️⃣ Configure Gmail App Password
+
+Go to your Google Account → Security → App Passwords
+
+Generate a 16-character app password
+
+Replace inside code.py:
+
+SENDER_EMAIL = "your_email@gmail.com"
+SENDER_PASSWORD = "your_app_password"
+
+▶️ Running the Script
+
+Run in terminal or VS Code:
+
+python code.py
+
+
+Certificates will be saved in generated_certificates/ and also emailed to participants.
+
+🖼️ Certificate Template
+
+Use emptytemplet.png as your base design.
+
+The script will automatically add participant details inside predefined bounding boxes.
+
+📧 Email Notes
+
+Uses Gmail SMTP (smtp.gmail.com, port 587).
+
+Make sure you enabled App Passwords (not your main password).
+
+Check spam folder if emails don’t appear.
+
+🛠️ Future Improvements
+
+Add support for multiple templates
+
+Add GUI to customize font, colors, and placement
+
+Export certificates as PDF
+
+👨‍💻 Author
+
+Developed by 
+Y.SAI VARSHITHA
+contact:
+saivarshithayandaplli@gmail.com
